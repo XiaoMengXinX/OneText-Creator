@@ -10,6 +10,8 @@
 
 ``./onetext.sh {infile} [text] [by] [from] [collect time] [write time]``
 
+If the file doesn;t exist, created automatically in format.
+
 ## Chinese
 **适用于[https://github.com/lz233/OneText_For_Android](https://github.com/lz233/OneText_For_Android)的简易json生成器**
 
@@ -21,4 +23,4 @@
 
 ``./onetext.sh {json文件} [句子内容] [句子的原作者] [句子被收集的来源] [句子被收集的时间] [句子被创作的时间]``
 
-**若文件不存在，则自动以标准格式创建**
+若文件不存在，则自动以标准格式创建
