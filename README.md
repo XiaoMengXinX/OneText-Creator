@@ -13,8 +13,7 @@
 If the file doesn;t exist, created automatically in format.
 
 ## Chinese
-**适用于[https://github.com/lz233/OneText_For_Android](https://github.com/lz233/OneText_For_Android)的简易json生成器** ([发布地址](https://coolapk.com/apk/com.lz233.onetext))
-
+**适用于[https://github.com/lz233/OneText_For_Android](https://github.com/lz233/OneText_For_Android)([发布地址](https://coolapk.com/apk/com.lz233.onetext))的简易json生成器** 
 [Windows 版](https://github.com/sfubuki5/OTCreater) 由 [sfubuki5](https://github.com/sfubuki5/) 用批处理编写
 
 [Shell 版](https://github.com/xbl233/OneText-Creater) 由 [xbl2333](https://github.com/xbl233) 编写
