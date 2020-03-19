@@ -1,6 +1,6 @@
 # OneText-Creater
 ## English
-**A easy json creater for [https://github.com/lz233/OneText_For_Android](https://github.com/lz233/OneText_For_Android)**
+**A easy json creater for [https://github.com/lz233/OneText_For_Android](https://github.com/lz233/OneText_For_Android)** ([Realease URL](https://coolapk.com/apk/com.lz233.onetext))
 
 [Windows version](https://github.com/sfubuki5/OTCreater) written by [sfubuki5](https://github.com/sfubuki5/) in Windows batch
 
@@ -13,7 +13,7 @@
 If the file doesn;t exist, created automatically in format.
 
 ## Chinese
-**适用于[https://github.com/lz233/OneText_For_Android](https://github.com/lz233/OneText_For_Android)的简易json生成器**
+**适用于[https://github.com/lz233/OneText_For_Android](https://github.com/lz233/OneText_For_Android)的简易json生成器** ([发布地址](https://coolapk.com/apk/com.lz233.onetext))
 
 [Windows 版](https://github.com/sfubuki5/OTCreater) 由 [sfubuki5](https://github.com/sfubuki5/) 用批处理编写
 
