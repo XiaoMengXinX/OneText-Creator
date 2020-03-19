@@ -10,7 +10,7 @@
 
 ``./onetext.sh {infile} [text] [by] [from] [collect time] [write time]``
 
-If the file doesn't exist, created automatically in format.
+If the file doesn't exist, create automatically in format.
 
 ## Chinese
 **适用于[https://github.com/lz233/OneText_For_Android](https://github.com/lz233/OneText_For_Android)** ([发布地址](https://coolapk.com/apk/com.lz233.onetext)) **的简易json生成&编辑器** 
