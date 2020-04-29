@@ -4,7 +4,7 @@
 
 [Windows version](https://github.com/sfubuki5/OTCreater) written by [sfubuki5](https://github.com/sfubuki5/) in Windows batch
 
-[Shell version](https://github.com/xbl233/OneText-Creater) written by [xbl2333](https://github.com/xbl233)
+[Shell version](https://github.com/xbl233/OneText-Creater) written by [XiaoMengXinX](https://github.com/XiaoMengXinX)
 
 ### Shell version usage
 
