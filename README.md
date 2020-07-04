@@ -8,7 +8,7 @@
 
 ### Shell version usage
 
-``./onetext.sh {infile} [text] [by] [from] [collect time] [write time]``
+``bash Onetext-Creater.sh {infile} [text] [by] [from] [collect time] [write time]``
 
 If the file doesn't exist, create automatically in format.
 
