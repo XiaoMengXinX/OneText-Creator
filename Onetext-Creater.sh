@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 file=$1
 text=$2
 by=$3
@@ -14,6 +14,23 @@ then
     exit 0
 fi
 
+function format() {
+	cat "$file" | jq >"$file.bak"
+	mv "$file.bak" "$file"
+}
+
+if [ "$1" = 'format' ]
+then
+	file=$2
+		if [ ! -f "$file" ] || [ -z "$file" ]
+		then
+			echo "File doesn't exist."
+			exit 1
+		else
+			format
+			exit 1
+		fi
+fi
 
 if [ -z "$2" ]
 then
