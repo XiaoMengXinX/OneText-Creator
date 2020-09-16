@@ -1,7 +1,7 @@
 file=$1
 out=$2
 i=0
-nub=$(cat "$file" | grep -o hitokoto | wc -l)
+nub=$(cat "$file" | grep -c '"id"')
 today=$(date +%Y.%m.%d)
 
 while [ $i -lt $nub ]
