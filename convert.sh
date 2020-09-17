@@ -7,7 +7,7 @@ today=$(date +%Y.%m.%d)
 while [ $i -lt $nub ]
 do
 
-text0=$(cat $file | jq -r .[$i].hitokoto | tr -d "\n" )
+text0=$(cat $file | jq -r .[$i].hitokoto | tr -d "\n"|tr -d '[:cntrl:]')
 text=$(echo ${text0//'"'/'\"'})
 
 by=$(cat $file | jq -r .[$i].from)
