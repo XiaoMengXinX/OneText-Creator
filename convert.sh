@@ -23,7 +23,7 @@ else
 time=$(date -d @$time_unix "+%Y.%m.%d")
 fi
 
-bash onetext.sh $2 "$text" "$by" "$from" "$time"
+bash Onetext-Creator.sh $2 "$text" "$by" "$from" "$time"
 
 echo $i.$text $time_unix $time
 
