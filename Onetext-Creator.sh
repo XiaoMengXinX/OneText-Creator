@@ -9,7 +9,7 @@ write_time=$6
 if [ -z "$1" ] || [ "$1" = '-h' ] || [ "$1" = '--help' ]
 then
     echo "USAGE : bash $0 {infile} [text] [by] [from] [collect time] [write time]"
-    echo "	  bash $0 format {infile}"
+    echo "        bash $0 format {infile}"
     echo 'If there is no "write time", skip.'
     echo 'Use -h or --help to get help.'
     exit 0
