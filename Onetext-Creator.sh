@@ -1,6 +1,7 @@
 #!/bin/bash
 file=$1
 text=$2
+text0=$2
 by=$3
 from=$4
 collect_time=$5
@@ -71,7 +72,7 @@ if [ -z "$write_time" ]
         time="\"$collect_time\",\"$write_time\""
 fi
 
-if [ -z "$2" ]
+if [ -z "$text0" ]
     then
 	read -p "Type in the uri of the sentence.(Press enter to skip) " uri
 fi
