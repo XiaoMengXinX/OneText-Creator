@@ -4,19 +4,18 @@ text=$2
 by=$3
 from=$4
 collect_time=$5
-write_time=$6
 
 if [ -z "$1" ] || [ "$1" = '-h' ] || [ "$1" = '--help' ]
 then
-    echo "USAGE : bash $0 {infile} [text] [by] [from] [collect time] [write time]"
+    echo "USAGE : bash $0 {infile}"
+    echo "        bash $0 {infile} [text] [by] [from] [collect time] [-w \"write time\"] [-u uri]"
     echo "        bash $0 format {infile}"
-    echo 'If there is no "write time", skip.'
     echo 'Use -h or --help to get help.'
     exit 0
 fi
 
 function format() {
-	cat "$file" | jq >"$file.bak"
+	cat "$file" | jq . > "$file.bak"
 	mv "$file.bak" "$file"
 }
 
@@ -51,8 +50,19 @@ fi
 if [ -z "$5" ]
 then
     read -p "Type in when the text was collected (yyyy.mm.dd) " collect_time
-    read -p "Type in when the text was written " write_time
+    read -p "Type in when the text was written.(Press enter to skip) " write_time
 fi
+
+shift 5
+while getopts ":u:w:" opt
+do
+	case $opt in
+		u)
+		uri="$OPTARG";;
+		w)
+		write_time="$OPTARG";;
+	esac
+done
 
 if [ -z "$write_time" ]
     then
@@ -61,7 +71,17 @@ if [ -z "$write_time" ]
         time="\"$collect_time\",\"$write_time\""
 fi
 
-if [ ! -f "$file" ]
+if [ -z "$2" ]
+    then
+	read -p "Type in the uri of the sentence.(Press enter to skip) " uri
+fi
+
+if [ "$uri" ]
+    then
+	uri_json="\"uri\": \""$uri"\","
+fi
+
+if [ ! -f "$file" ] || [ ! -s "$file" ]
 then
 	touch "$file"
 	cat >> $file <<- EOF
@@ -70,11 +90,13 @@ then
 	"text": "$text",
 	"by": "$by",
 	"from": "$from",
+	$uri_json
 	"time": [$time]
 	}
 	]
 	EOF
 else
+    format
     sed -i '$d' $file
     sed -i '$d' $file
     echo '},' >> $file
@@ -83,8 +105,10 @@ else
 	"text": "$text",
 	"by": "$by",
 	"from": "$from",
+	$uri_json
 	"time": [$time]
 	}
 	]
 	EOF
+	format
 fi

@@ -1,3 +1,4 @@
+#!/bin/bash
 file=$1
 out=$2
 i=0
