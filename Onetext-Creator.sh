@@ -9,7 +9,7 @@ collect_time=$5
 if [ -z "$1" ] || [ "$1" = '-h' ] || [ "$1" = '--help' ]
 then
     echo "USAGE : bash $0 {infile}"
-    echo "        bash $0 {infile} [text] [by] [from] [collect time] [-w \"write time\"] [-u uri]"
+    echo "        bash $0 {infile} [text] [by] [from] [collect time] [-w write time] [-u uri]"
     echo "        bash $0 format {infile}"
     echo 'Use -h or --help to get help.'
     exit 0

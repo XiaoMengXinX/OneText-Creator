@@ -8,7 +8,7 @@
 
 ### Shell version usage
 
-``bash Onetext-Creator.sh {infile} [text] [by] [from] [collect time] [write time]``
+``bash Onetext-Creator.sh {infile} [text] [by] [from] [collect time] [-w write time] [-u uri]``
 
 If the file doesn't exist, create automatically in format.
 
@@ -21,7 +21,7 @@ If the file doesn't exist, create automatically in format.
 
 ### Shell 版使用方法
 
-``bash Onetext-Creator.sh {json文件} [句子内容] [句子的原作者] [句子被收集的来源] [句子被收集的时间] [句子被创作的时间]``
+``bash Onetext-Creator.sh {json文件} [句子内容] [句子的原作者] [句子被收集的来源] [句子被收集的时间] [-w 句子被创作的时间] [-u 追踪uri]``
 
 若文件不存在，则自动以标准格式创建
 
