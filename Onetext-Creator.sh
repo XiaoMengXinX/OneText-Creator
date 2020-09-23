@@ -16,8 +16,15 @@ then
 fi
 
 function format() {
-	cat "$file" | jq . > "$file.bak"
-	mv "$file.bak" "$file"
+	cat "$file" | jq . > "$file.tmp"
+	if [ ! -s "$file.tmp" ]
+	then
+		echo "Invaid json format.File unchanged."
+		rm "$file.tmp"
+		exit 0
+	else
+		mv "$file.tmp" "$file"
+	fi
 }
 
 if [ "$1" = 'format' ]
@@ -96,6 +103,7 @@ then
 	}
 	]
 	EOF
+    format
 else
     format
     sed -i '$d' $file
@@ -111,5 +119,5 @@ else
 	}
 	]
 	EOF
-	format
+    format
 fi

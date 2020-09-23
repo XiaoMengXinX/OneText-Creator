@@ -1,6 +1,7 @@
 #!/bin/bash
 file=$1
 out=$2
+uri=$3
 i=0
 nub=$(cat "$file" | grep -c '"id"')
 today=$(date +%Y.%m.%d)
@@ -24,7 +25,7 @@ else
 time=$(date -d @$time_unix "+%Y.%m.%d")
 fi
 
-bash Onetext-Creator.sh $2 "$text" "$by" "$from" "$time"
+bash Onetext-Creator.sh $2 "$text" "$by" "$from" "$time" -u "$uri"
 
 echo $i.$text $time_unix $time
 
